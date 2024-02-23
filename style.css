@@ -1,0 +1,30 @@
+
+.iframe-ctn {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    z-index: 9998;
+    width: 90%;
+    overscroll-behavior: contain;
+    touch-action: none;
+}
+
+.iframe-ctn iframe {
+    z-index: 9999;
+}
+
+.iframe-ctn:empty {
+    display: none;
+}
+
+.iframe-ctn:after {
+    content: "";
+    background: #000c;
+    filter: blur(5px);
+    z-index: 9998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
