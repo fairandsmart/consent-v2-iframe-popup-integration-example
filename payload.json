@@ -6,20 +6,20 @@
   "origin": "WEBFORM",
   "confirmation": "NONE",
   "sendInvitation": false,
-	"layoutData": {
-		"type": "layout",
-		"info": "information.iframe.integration.test.001",
-		"blocs": [
-			{
-				"parent": {
-					"key": "process.iframe.integration.test.newsletter.001"
-				}
-			}
-		],
-		"orientation": "VERTICAL",
-		"acceptAllVisible": false,
-		"cancelVisible": false,
-		"footerOnTop": false,
+  "layoutData": {
+    "type": "layout",
+    "info": "information.iframe.integration.test.001",
+    "blocs": [
+      {
+        "parent": {
+          "key": "process.iframe.integration.test.newsletter.001"
+        }
+      }
+    ],
+    "orientation": "VERTICAL",
+    "acceptAllVisible": false,
+    "cancelVisible": false,
+    "footerOnTop": false,
     "submitText": "Souscrire"
-	}
+  }
 }
