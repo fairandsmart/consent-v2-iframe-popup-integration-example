@@ -9,6 +9,7 @@ function getConf()
     $config["auth_username"] = key_exists("AUTH_USERNAME", $_ENV) ? $_ENV["AUTH_USERNAME"] : $config["auth_username"];
     $config["auth_password"] = key_exists("AUTH_PASSWORD", $_ENV) ? $_ENV["AUTH_PASSWORD"] : $config["auth_password"];
     $config["cm_url"] = key_exists("CM_URL", $_ENV) ? $_ENV["CM_URL"] : $config["cm_url"];
+    $config["cm_key"] = key_exists("CM_KEY", $_ENV) ? $_ENV["CM_KEY"] : $config["cm_key"];
     return $config;
 }
 

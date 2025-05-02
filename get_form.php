@@ -11,6 +11,7 @@ function getFormUrl($uuid, $email)
 {
     $token = getToken();
     $config = getConf();
+    $cm_key = $config["cm_key"];
 
     $context = getPayload();
     $context["subject"] = $uuid;
@@ -23,7 +24,11 @@ function getFormUrl($uuid, $email)
 
     $curl_url = $config["cm_url"] . "/consents";
     $curl_postfields = json_encode($context);
-    $curl_httpheaders = array("Authorization: Bearer $token", "Content-Type: application/json");
+    if(!empty($cm_key)){
+        $curl_httpheaders = array("CM-Key: $cm_key", "Content-Type: application/json");
+    } else {
+        $curl_httpheaders = array("Authorization: Bearer $token", "Content-Type: application/json");
+    }
 
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $curl_url);
