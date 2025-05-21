@@ -24,6 +24,7 @@ docker).
 | auth server username       | AUTH_USERNAME | auth_username   |
 | auth server password       | AUTH_PASSWORD | auth_password   |
 | consent manager server url | CM_URL | cm_url          |
+| consent manager API Key | CM_KEY | cm_key          |
 
 Configuration file is loaded from CONFIG_FILE_PATH (default : "config.ini"). 
  

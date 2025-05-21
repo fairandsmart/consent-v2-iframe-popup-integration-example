@@ -9,9 +9,14 @@ function getRecords($uuid)
 {
     $token = getToken();
     $config = getConf();
+    $cm_key = $config["cm_key"];
 
     $curl_url = $config["cm_url"] . "/records?subject=$uuid";
-    $curl_httpheaders = array("Authorization: Bearer $token", "Content-Type: application/json");
+    if(!empty($cm_key)){
+         $curl_httpheaders = array("CM-Key: $cm_key", "Content-Type: application/json");
+     } else {
+         $curl_httpheaders = array("Authorization: Bearer $token", "Content-Type: application/json");
+     }
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $curl_url);
     curl_setopt($curl, CURLOPT_HTTPHEADER, $curl_httpheaders);
